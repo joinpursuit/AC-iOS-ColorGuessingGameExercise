@@ -63,6 +63,8 @@ class ViewController: UIViewController {
             gameOverLabel.isHidden = false
             newGameOutlet.isHidden = false
             
+            gameOverLabel.flash()
+            
         }
         
     }
@@ -75,7 +77,6 @@ class ViewController: UIViewController {
     
     
     @IBAction func newGameBtn(_ sender: UIButton) {
-        sender.flash()
         //Determine high score by comparing to the current score
         if highScoreValue < currentColor.currentScore{
             highScoreValue = currentColor.currentScore
