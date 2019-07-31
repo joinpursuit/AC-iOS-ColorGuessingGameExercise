@@ -42,7 +42,7 @@ extension UIButton {
         
         let shake = CABasicAnimation(keyPath: "position")
         shake.duration = 0.1
-        shake.repeatCount = 1
+        shake.repeatCount = 3
         shake.autoreverses = true
         
         let fromPoint = CGPoint(x: center.x - 5, y: center.y)
