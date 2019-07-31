@@ -122,6 +122,7 @@ class ViewController: UIViewController {
             button.layer.borderWidth = 1.0
         }
         
+        questionLabel.text = "Which color is the sample above closest to?"
         questionLabel.layer.cornerRadius = 8
         
         newGameOutlet.layer.cornerRadius = newGameOutlet.frame.height / 2
