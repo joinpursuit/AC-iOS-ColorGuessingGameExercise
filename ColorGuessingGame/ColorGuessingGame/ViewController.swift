@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var currentScore: UILabel!
     @IBOutlet weak var highScore: UILabel!
     @IBOutlet weak var colorBoard: UIView!
@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     var highScoreValue = 0
     var currentColor = RGBValues.init()
     
+    //User makes guess by clicking on buttons and assigns color to guess
     @IBAction func makeGuess(_ sender: UIButton) {
         var userGuess: UIColor
 
@@ -39,28 +40,15 @@ class ViewController: UIViewController {
         }
         
         let answer = currentColor.checkGuess(userGuess)
-        
         if answer {
             self.currentScore.text = "Current Score: \(currentColor.currentScore)"
 
-            self.currentColor.assignNewColor()
-            self.colorBoard.backgroundColor = currentColor.randomColor
-            
+            resetRandomColor()
         } else {
-            
             disableButtons()
             self.gameOverLabel.isHidden = false
             self.newGameLabel.isHidden = false
-
-            
         }
-        
-    }
-    
-    func disableButtons() {
-        self.redButton.isEnabled = false
-        self.greenButton.isEnabled = false
-        self.blueButton.isEnabled = false
     }
     
     
@@ -77,8 +65,7 @@ class ViewController: UIViewController {
         self.currentColor.currentScore = 0
         
         //reset random color
-        self.currentColor.assignNewColor()
-        self.colorBoard.backgroundColor = currentColor.randomColor
+        resetRandomColor()
         
         //enable buttons
         self.redButton.isEnabled = true
@@ -87,8 +74,21 @@ class ViewController: UIViewController {
         
         //hide game over buttons
         hideGOButtons()
-        
     }
+    
+    
+    func resetRandomColor() {
+        self.currentColor.assignNewColor()
+        self.colorBoard.backgroundColor = currentColor.randomColor
+    }
+    
+    
+    func disableButtons() {
+        self.redButton.isEnabled = false
+        self.greenButton.isEnabled = false
+        self.blueButton.isEnabled = false
+    }
+    
     
     func hideGOButtons() {
         self.gameOverLabel.isHidden = true

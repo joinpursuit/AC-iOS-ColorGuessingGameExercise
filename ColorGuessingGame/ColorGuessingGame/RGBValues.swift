@@ -16,7 +16,6 @@ struct RGBValues {
 
     
     init() {
-//    mutating func assignNewColor() {
         let someRandomColor = RGBValues.getRandomColor()
         self.randomColor = someRandomColor.randomColor
         self.dominantColor = someRandomColor.dominantColor
