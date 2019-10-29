@@ -58,14 +58,14 @@
 		E11572A52368BEE200F05E05 /* ColorGuessingGame */ = {
 			isa = PBXGroup;
 			children = (
+				E11572B42368BEE400F05E05 /* Info.plist */,
 				E11572A62368BEE200F05E05 /* AppDelegate.swift */,
+				E11572BA2368C28A00F05E05 /* GuessingGame.swift */,
 				E11572A82368BEE200F05E05 /* SceneDelegate.swift */,
 				E11572AA2368BEE200F05E05 /* ViewController.swift */,
-				E11572AC2368BEE200F05E05 /* Main.storyboard */,
 				E11572AF2368BEE400F05E05 /* Assets.xcassets */,
 				E11572B12368BEE400F05E05 /* LaunchScreen.storyboard */,
-				E11572B42368BEE400F05E05 /* Info.plist */,
-				E11572BA2368C28A00F05E05 /* GuessingGame.swift */,
+				E11572AC2368BEE200F05E05 /* Main.storyboard */,
 			);
 			path = ColorGuessingGame;
 			sourceTree = "<group>";

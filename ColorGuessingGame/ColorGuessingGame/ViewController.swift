@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayLabel: UILabel!
     @IBOutlet weak var scoreCounter: UILabel!
     @IBOutlet weak var highScore: UILabel!
+    @IBOutlet weak var playAgainButton: UIButton!
     var score: Int = 0
     
     override func viewDidLoad() {
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         let firstRandomColor = GuessingGame()
         colorView.backgroundColor = firstRandomColor.randomColor
+        playAgainButton.isHidden.toggle()
     }
     
     @IBAction func colorButtonChoice(_ sender: UIButton) {
@@ -43,6 +45,7 @@ class ViewController: UIViewController {
             for button in colorButtons {
                 button.isEnabled.toggle()
             }
+            playAgainButton.isHidden.toggle()
         }
     }
     @IBAction func newGame(_ sender: UIButton) {
@@ -56,6 +59,7 @@ class ViewController: UIViewController {
             button.isEnabled.toggle()
         }
         
+        playAgainButton.isHidden.toggle()
         
     }
     
@@ -76,7 +80,5 @@ class ViewController: UIViewController {
             return 2
         }
     }
-    
-    
 }
 

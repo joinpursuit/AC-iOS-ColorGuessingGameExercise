@@ -95,6 +95,7 @@
                         <outlet property="colorView" destination="jdY-58-PDb" id="LDb-Xh-7kI"/>
                         <outlet property="displayLabel" destination="yd4-GS-gCK" id="efv-uT-qWM"/>
                         <outlet property="highScore" destination="kAY-zG-Csw" id="rep-Cy-TWb"/>
+                        <outlet property="playAgainButton" destination="ZI4-mj-3Tr" id="g21-eq-y0c"/>
                         <outlet property="scoreCounter" destination="iPE-VU-Khx" id="OOy-5F-Nm4"/>
                         <outletCollection property="colorButtons" destination="jqF-Oo-5Ni" collectionClass="NSMutableArray" id="83D-ix-Fch"/>
                         <outletCollection property="colorButtons" destination="xEo-6N-WMA" collectionClass="NSMutableArray" id="PmW-aW-DNe"/>
