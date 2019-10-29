@@ -62,14 +62,14 @@ final class ViewController: UIViewController {
     }
     
     private func viewAttributes() {
+        gameStatusLabel.attributes()
         randomColorView.gameViewAttributes()
-        view.attributes()
-        newGame.buttonAttributes()
-        scoreLabel.labelAttributes()
-        gameStatusLabel.labelAttributes()
-        greenSelectorButton.buttonAttributes()
-        redSelectorButton.buttonAttributes()
-        blueSelectorButton.buttonAttributes()
+        newGame.attributes()
+        scoreLabel.attributes()
+        highestScoreLabel.attributes()
+        greenSelectorButton.attributes()
+        redSelectorButton.attributes()
+        blueSelectorButton.attributes()
     }
     
     private func wrongChoice() {
