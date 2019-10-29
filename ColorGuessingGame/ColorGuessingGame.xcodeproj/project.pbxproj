@@ -13,7 +13,7 @@
 		E11572AE2368BEE200F05E05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E11572AC2368BEE200F05E05 /* Main.storyboard */; };
 		E11572B02368BEE400F05E05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11572AF2368BEE400F05E05 /* Assets.xcassets */; };
 		E11572B32368BEE400F05E05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E11572B12368BEE400F05E05 /* LaunchScreen.storyboard */; };
-		E11572BB2368C28A00F05E05 /* guessGaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11572BA2368C28A00F05E05 /* guessGaming.swift */; };
+		E11572BB2368C28A00F05E05 /* GuessingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11572BA2368C28A00F05E05 /* GuessingGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		E11572AF2368BEE400F05E05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E11572B22368BEE400F05E05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E11572B42368BEE400F05E05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E11572BA2368C28A00F05E05 /* guessGaming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guessGaming.swift; sourceTree = "<group>"; };
+		E11572BA2368C28A00F05E05 /* GuessingGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessingGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				E11572AF2368BEE400F05E05 /* Assets.xcassets */,
 				E11572B12368BEE400F05E05 /* LaunchScreen.storyboard */,
 				E11572B42368BEE400F05E05 /* Info.plist */,
-				E11572BA2368C28A00F05E05 /* guessGaming.swift */,
+				E11572BA2368C28A00F05E05 /* GuessingGame.swift */,
 			);
 			path = ColorGuessingGame;
 			sourceTree = "<group>";
@@ -142,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E11572AB2368BEE200F05E05 /* ViewController.swift in Sources */,
-				E11572BB2368C28A00F05E05 /* guessGaming.swift in Sources */,
+				E11572BB2368C28A00F05E05 /* GuessingGame.swift in Sources */,
 				E11572A72368BEE200F05E05 /* AppDelegate.swift in Sources */,
 				E11572A92368BEE200F05E05 /* SceneDelegate.swift in Sources */,
 			);

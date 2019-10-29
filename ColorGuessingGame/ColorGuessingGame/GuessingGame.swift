@@ -10,6 +10,6 @@ import UIKit
 
 struct GuessingGame {
     let randomColor = UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: CGFloat.random(in: 0...1))
-    
+    static var highScore = 0
 }
 

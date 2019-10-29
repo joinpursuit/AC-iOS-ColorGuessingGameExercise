@@ -9,10 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var colorView: UIView!
     @IBOutlet var colorButtons: [UIButton]!
     @IBOutlet weak var displayLabel: UILabel!
     @IBOutlet weak var scoreCounter: UILabel!
+    @IBOutlet weak var highScore: UILabel!
     var score: Int = 0
     
     override func viewDidLoad() {
@@ -31,6 +33,11 @@ class ViewController: UIViewController {
             score += 1
             scoreCounter.text = String(score)
             colorView.backgroundColor = changingColor.randomColor
+            
+            if score > GuessingGame.highScore {
+                GuessingGame.highScore = score
+                highScore.text = String(GuessingGame.highScore)
+            }
         } else {
             displayLabel.text = "Wrong!"
             for button in colorButtons {
