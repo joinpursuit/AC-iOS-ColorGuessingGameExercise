@@ -28,4 +28,29 @@ extension UIColor {
     }
 }
 
+extension UIView {
+    func attributes() {
+        self.layer.cornerRadius = 5.0
+        self.layer.masksToBounds = true
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+    }
+}
+    
+    extension UIButton {
+    func buttonAttributes() {
+        self.layer.cornerRadius = 5.0
+        self.layer.masksToBounds = true
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+    }
+}
 
+extension UILabel {
+    func labelAttributes() {
+    self.layer.cornerRadius = 5.0
+    self.layer.masksToBounds = true
+    self.layer.borderWidth = 1
+    self.layer.borderColor = UIColor.black.cgColor
+}
+}

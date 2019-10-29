@@ -59,41 +59,21 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         viewAttributes()
         randomColorView.backgroundColor = game.randomColor
+        
     }
     
     private func viewAttributes() {
-        newGame.layer.cornerRadius = 5.0
-        scoreLabel.layer.cornerRadius = 5.0
-        newGame.layer.masksToBounds = true
-        scoreLabel.layer.masksToBounds = true
-        gameStatusLabel.layer.cornerRadius = 5.0
-        gameStatusLabel.layer.masksToBounds = true
         randomColorView.layer.cornerRadius = 5.0
         randomColorView.layer.masksToBounds = true
-        greenSelectorButton.layer.cornerRadius = 5.0
-        greenSelectorButton.layer.masksToBounds = true
-        redSelectorButton.layer.cornerRadius = 5.0
-        redSelectorButton.layer.masksToBounds = true
-        blueSelectorButton.layer.cornerRadius = 5.0
-        blueSelectorButton.layer.masksToBounds = true
-        highestScoreLabel.layer.cornerRadius = 5.0
-        highestScoreLabel.layer.masksToBounds = true
         randomColorView.layer.borderWidth = 10
         randomColorView.layer.borderColor = UIColor.black.cgColor
-        newGame.layer.borderWidth = 1
-        newGame.layer.borderColor = UIColor.black.cgColor
-        scoreLabel.layer.borderWidth = 1
-        scoreLabel.layer.borderColor = UIColor.black.cgColor
-        gameStatusLabel.layer.borderWidth = 1
-        gameStatusLabel.layer.borderColor = UIColor.black.cgColor
-        greenSelectorButton.layer.borderWidth = 1
-        greenSelectorButton.layer.borderColor = UIColor.black.cgColor
-        redSelectorButton.layer.borderWidth = 1
-        redSelectorButton.layer.borderColor = UIColor.black.cgColor
-        blueSelectorButton.layer.borderWidth = 1
-        blueSelectorButton.layer.borderColor = UIColor.black.cgColor
-        highestScoreLabel.layer.borderWidth = 1
-        highestScoreLabel.layer.borderColor = UIColor.black.cgColor
+        view.attributes()
+        newGame.buttonAttributes()
+        scoreLabel.labelAttributes()
+        gameStatusLabel.labelAttributes()
+        greenSelectorButton.buttonAttributes()
+        redSelectorButton.buttonAttributes()
+        blueSelectorButton.buttonAttributes()
     }
     
     private func wrongChoice() {
@@ -116,7 +96,7 @@ final class ViewController: UIViewController {
         game.score = 0
         scoreLabel.text = "  Score: \(game.score)"
         buttonEnable = true
-        gameStatusLabel.text = "  Pick the dominant color"
+        gameStatusLabel.text = "  Pick The Dominant Color"
     }
     
 }
