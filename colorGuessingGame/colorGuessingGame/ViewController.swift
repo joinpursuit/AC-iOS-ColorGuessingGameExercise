@@ -59,14 +59,10 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         viewAttributes()
         randomColorView.backgroundColor = game.randomColor
-        
     }
     
     private func viewAttributes() {
-        randomColorView.layer.cornerRadius = 5.0
-        randomColorView.layer.masksToBounds = true
-        randomColorView.layer.borderWidth = 10
-        randomColorView.layer.borderColor = UIColor.black.cgColor
+        randomColorView.gameViewAttributes()
         view.attributes()
         newGame.buttonAttributes()
         scoreLabel.labelAttributes()

@@ -35,9 +35,16 @@ extension UIView {
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.black.cgColor
     }
-}
     
-    extension UIButton {
+    func gameViewAttributes() {
+        self.layer.cornerRadius = 5.0
+        self.layer.masksToBounds = true
+        self.layer.borderWidth = 10
+        self.layer.borderColor = UIColor.black.cgColor
+    }
+}
+
+extension UIButton {
     func buttonAttributes() {
         self.layer.cornerRadius = 5.0
         self.layer.masksToBounds = true
@@ -48,9 +55,9 @@ extension UIView {
 
 extension UILabel {
     func labelAttributes() {
-    self.layer.cornerRadius = 5.0
-    self.layer.masksToBounds = true
-    self.layer.borderWidth = 1
-    self.layer.borderColor = UIColor.black.cgColor
-}
+        self.layer.cornerRadius = 5.0
+        self.layer.masksToBounds = true
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+    }
 }
