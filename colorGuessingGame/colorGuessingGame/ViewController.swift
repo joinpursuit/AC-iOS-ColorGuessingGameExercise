@@ -88,6 +88,7 @@ final class ViewController: UIViewController {
     
     private func startGame() {
         randomColorView.backgroundColor = game.randomColor
+        colorValues = randomColorView.backgroundColor?.rgba
         highestScoreLabel.text = "  Highest Score: \(game.newHighestScore())"
         game.score = 0
         scoreLabel.text = "  Score: \(game.score)"

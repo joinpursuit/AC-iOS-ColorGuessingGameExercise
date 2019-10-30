@@ -31,17 +31,17 @@ extension UIColor {
 extension UIView {
     
     func attributes() {
-        self.layer.cornerRadius = 5.0
-        self.layer.masksToBounds = true
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.black.cgColor
+        layer.cornerRadius = 5.0
+        layer.masksToBounds = true
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.black.cgColor
     }
     
     func gameViewAttributes() {
-        self.layer.borderWidth = 10
-        self.layer.cornerRadius = 5.0
-        self.layer.masksToBounds = true
-        self.layer.borderColor = UIColor.black.cgColor
+        layer.borderWidth = 10
+        layer.cornerRadius = 5.0
+        layer.masksToBounds = true
+        layer.borderColor = UIColor.black.cgColor
     }
 }
 
