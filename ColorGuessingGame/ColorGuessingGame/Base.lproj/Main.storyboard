@@ -26,6 +26,9 @@
                                 <state key="normal" title="Green">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="rightColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E40-P5-9pg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6J-zg-URs">
                                 <rect key="frame" x="20" y="330" width="88" height="75"/>
@@ -33,6 +36,9 @@
                                 <state key="normal" title="Red">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="rightColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dOD-l7-VYo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Is-le-MFv">
                                 <rect key="frame" x="271" y="330" width="88" height="75"/>
@@ -40,16 +46,51 @@
                                 <state key="normal" title="Blue">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="rightColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rhc-0Y-Bmy"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWK-I3-PZV">
+                                <rect key="frame" x="152" y="617" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rhV-LC-Yfe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOf-0B-Fzx">
+                                <rect key="frame" x="0.0" y="496" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highest Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6Y-JW-RF2">
+                                <rect key="frame" x="0.0" y="525" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick the closest color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE5-Qx-IXz">
+                                <rect key="frame" x="31" y="452" width="317" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="blueButton" destination="4Is-le-MFv" id="JHO-Cg-w1P"/>
-                        <outlet property="greenButton" destination="Xq3-Dt-Twp" id="jkB-Ny-AP2"/>
+                        <outlet property="blueButton" destination="4Is-le-MFv" id="Fs3-Kd-sUo"/>
+                        <outlet property="greenButton" destination="Xq3-Dt-Twp" id="Fcu-0l-SQC"/>
+                        <outlet property="highestScore" destination="B6Y-JW-RF2" id="IzR-qS-fF0"/>
                         <outlet property="randomColor" destination="vPb-0r-5M6" id="Tgq-4e-DPQ"/>
-                        <outlet property="redButton" destination="b6J-zg-URs" id="OdO-6o-b6Q"/>
+                        <outlet property="redButton" destination="b6J-zg-URs" id="8S1-BQ-rBw"/>
+                        <outlet property="score" destination="QOf-0B-Fzx" id="FZa-85-6hs"/>
+                        <outlet property="userAction" destination="bE5-Qx-IXz" id="wxe-MR-aG7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

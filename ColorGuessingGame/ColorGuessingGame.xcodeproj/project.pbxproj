@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C89CB4D2368DAA800C00915 /* GuessColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89CB4C2368DAA800C00915 /* GuessColor.swift */; };
 		6CB34C0C2368C2E100CAB98F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB34C0B2368C2E100CAB98F /* AppDelegate.swift */; };
 		6CB34C0E2368C2E100CAB98F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB34C0D2368C2E100CAB98F /* SceneDelegate.swift */; };
 		6CB34C102368C2E100CAB98F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB34C0F2368C2E100CAB98F /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C89CB4C2368DAA800C00915 /* GuessColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessColor.swift; sourceTree = "<group>"; };
 		6CB34C082368C2E100CAB98F /* ColorGuessingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorGuessingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB34C0B2368C2E100CAB98F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CB34C0D2368C2E100CAB98F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				6CB34C0B2368C2E100CAB98F /* AppDelegate.swift */,
 				6CB34C0D2368C2E100CAB98F /* SceneDelegate.swift */,
+				6C89CB4C2368DAA800C00915 /* GuessColor.swift */,
 				6CB34C0F2368C2E100CAB98F /* ViewController.swift */,
 				6CB34C112368C2E100CAB98F /* Main.storyboard */,
 				6CB34C142368C2E300CAB98F /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CB34C102368C2E100CAB98F /* ViewController.swift in Sources */,
+				6C89CB4D2368DAA800C00915 /* GuessColor.swift in Sources */,
 				6CB34C0C2368C2E100CAB98F /* AppDelegate.swift in Sources */,
 				6CB34C0E2368C2E100CAB98F /* SceneDelegate.swift in Sources */,
 			);
