@@ -37,10 +37,6 @@ class ViewController: UIViewController {
         displayLabel.text = "Match the correct color"
         updateDisplayColor()
         
-        red.backgroundColor = .red
-        green.backgroundColor = .green
-        blue.backgroundColor = .blue
-        
         
     }
     
@@ -103,10 +99,10 @@ class ViewController: UIViewController {
     @IBAction func resetGame(_ sender: UIButton) {
         print(arrayOfScores)
         
-        randomNumArr.removeAll()
-        updateDisplayColor()
+        randomNumArr.removeAll() //
+        updateDisplayColor() //
         displayLabel.text = "Match the correct color"
-        score = 0
+        score = 0 //
         red.isEnabled = true
         blue.isEnabled = true
         green.isEnabled = true
