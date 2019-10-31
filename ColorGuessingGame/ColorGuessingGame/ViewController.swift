@@ -23,10 +23,11 @@ class ViewController: UIViewController {
     var redValue = CGFloat.random(in: 0...1)
     var greenValue = CGFloat.random(in: 0...1)
     var blueValue = CGFloat.random(in: 0...1)
-    var randomNumOfColor = CGFloat.random(in: 0...1)
+//    var randomNumOfColor = CGFloat.random(in: 0...1)
     
     @IBOutlet weak var gameStatusLabel: UILabel!
     @IBOutlet weak var nameOfTheGame: UILabel!
+    
     
     var score = 0
     var totalScore = 0
@@ -35,10 +36,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         nameOfTheGame.text = "COLOR GUESSING GAME"
         colorDisplayScreen.layer.borderColor = UIColor.black.cgColor
-        randomNumOfColor = CGFloat.random(in: 0...1)
-        
-        self.colorDisplayScreen.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat.random(in: 0...1))
-        
+//        randomNumOfColor = CGFloat.random(in: 0...1)
+        colorDisplayScreen.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat.random(in: 0...1))
         gameStatusLabel.text = "Pick button with color that contains the most of it on screen above."
         // Do any additional setup after loading the view.
     }
@@ -61,6 +60,9 @@ class ViewController: UIViewController {
                 self.colorDisplayScreen.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat.random(in: 0...1))
             } else {
                 gameStatusLabel.text = "Wrong guess. Your total score of the game is \(totalScore). Game over!"
+                redButton.isEnabled = false
+                greenButton.isEnabled = false
+                blueButton.isEnabled = false
             }
         case 1:
             if colorArray.max() == greenValue {
@@ -70,10 +72,12 @@ class ViewController: UIViewController {
                 redValue = CGFloat.random(in: 0...1)
                 greenValue = CGFloat.random(in: 0...1)
                 blueValue = CGFloat.random(in: 0...1)
-                
-                self.colorDisplayScreen.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat.random(in: 0...1))
+                colorDisplayScreen.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat.random(in: 0...1))
             } else {
                 gameStatusLabel.text = "Wrong guess. Your total score of the game is \(totalScore). Game over!"
+                redButton.isEnabled = false
+                greenButton.isEnabled = false
+                blueButton.isEnabled = false
             }
         case 2:
             if colorArray.max() == blueValue {
@@ -83,9 +87,12 @@ class ViewController: UIViewController {
                 redValue = CGFloat.random(in: 0...1)
                 greenValue = CGFloat.random(in: 0...1)
                 blueValue = CGFloat.random(in: 0...1)
-                self.colorDisplayScreen.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat.random(in: 0...1))
+                colorDisplayScreen.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat.random(in: 0...1))
             } else {
                 gameStatusLabel.text = "Wrong guess. Your total score of the game is \(totalScore). Game over!"
+                redButton.isEnabled = false
+                greenButton.isEnabled = false
+                blueButton.isEnabled = false
             } default:
                 gameStatusLabel.text = "error"
         }
@@ -93,6 +100,9 @@ class ViewController: UIViewController {
     
     @IBAction func playAgain(_ sender: UIButton) {
         score = 0
+        redButton.isEnabled = true
+        greenButton.isEnabled = true
+        blueButton.isEnabled = true
         viewDidLoad()
     }
 }
