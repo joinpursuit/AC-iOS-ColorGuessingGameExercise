@@ -28,51 +28,80 @@ class ViewController: UIViewController {
     var currentHighScore = 0
     var newHighScore = 0
     
+    func randomColor() -> UIColor {
+         red = CGFloat.random(in: 0...1)
+         blue = CGFloat.random(in: 0...1)
+         green = CGFloat.random(in: 0...1)
+         let newColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
+         return newColor
+         //colorGuessBox.backgroundColor = myColor
+         
+     }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        randomColor() // changes color of the viewBox
+
+
+//------------------------------------------------------------------------------------------
+
+        // changes color of the viewBox
         
-// Changing the color of the color choice buttons
+        colorGuessBox.backgroundColor = randomColor()
+
+//------------------------------------------------------------------------------------------
+
+        
+        // Changing the color of the color choice buttons
+        
         buttonRed.backgroundColor = .red
         buttonBlue.backgroundColor = .blue
         buttonGreen.backgroundColor = .green
 
     }
- //------------------------------------------------------------------------------------------
-    func randomColor() {
-       
-        _ = CGFloat.random(in: 0...1)
-        _ = CGFloat.random(in: 0...1)
-        _ = CGFloat.random(in: 0...1)
-
-        colorGuessBox.backgroundColor = myColor
-
-    }
 //------------------------------------------------------------------------------------------
 
+    // Color View Box
+    
+//    func randomColor() -> UIColor {
+//        red = CGFloat.random(in: 0...1)
+//        blue = CGFloat.random(in: 0...1)
+//        green = CGFloat.random(in: 0...1)
+//        let newColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
+//        return newColor
+//        //colorGuessBox.backgroundColor = myColor
+//
+//    }
+//------------------------------------------------------------------------------------------
+
+    // color buttons choice (actionable button response)
  
     @IBAction func buttonAction(_ sender: UIButton) {
-        randomColor()
+        colorGuessBox.backgroundColor = randomColor()
         colorChoiceActionResult(sender)
     }
     
+//------------------------------------------------------------------------------------------
 
+    // func to respond to button actions
+    // correct answer = +1 in score
+    // wrong answer reselt in score reverting back to 0
     
     func colorChoiceActionResult(_ sender: UIButton) {
 
         switch sender.tag {
         case 0:
             if red > green &&  red > blue {
+                
                 titlePrompt.text = "CORRECT 🤩"
                 currentScore += 1
-                scoreOutletLabel.text = "Score: \(currentScore)"
-                
+                scoreOutletLabel.text = "Current Score: \(currentScore)"
+                 colorGuessBox.backgroundColor = randomColor()
 
             } else {
-                titlePrompt.textColor = .blue
+                titlePrompt.textColor = .red
                 titlePrompt.text = "WRONG 👻"
                 currentScore = 0
                 scoreOutletLabel.text = "Score: \(currentScore)"
@@ -81,9 +110,10 @@ class ViewController: UIViewController {
 
         case 1:
             if blue > green &&  blue > red {
+                 colorGuessBox.backgroundColor = randomColor()
                 titlePrompt.text = "CORRECT 🤩"
                 currentScore += 1
-                scoreOutletLabel.text = "Score: \(currentScore)"
+                scoreOutletLabel.text = "Current Score: \(currentScore)"
 
             } else {
                 titlePrompt.textColor = .blue
@@ -93,10 +123,10 @@ class ViewController: UIViewController {
             }
 
         case 2:
-            if green > blue &&  green > red {
+            if green > blue &&  green > red { colorGuessBox.backgroundColor = randomColor()
                 titlePrompt.text = "CORRECT 🤩"
                 currentScore += 1
-                scoreOutletLabel.text = "Score: \(currentScore)"
+                scoreOutletLabel.text = "Current Score: \(currentScore)"
 
             } else {
                 titlePrompt.textColor = .blue
@@ -112,13 +142,14 @@ class ViewController: UIViewController {
     
     
     @IBAction func restartButtonAction(_ sender: UIButton) {
-        randomColor()
+        colorGuessBox.backgroundColor = randomColor()
         currentScore = 0
         scoreOutletLabel.text = "Score: \(currentScore)"
         
     }
     
-    
+//------------------------------------------------------------------------------------------
+
     
 }
 
