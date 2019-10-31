@@ -34,7 +34,7 @@ class ViewController: UIViewController {
          green = CGFloat.random(in: 0...1)
          let newColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
          return newColor
-         //colorGuessBox.backgroundColor = myColor
+       
          
      }
     
@@ -63,17 +63,6 @@ class ViewController: UIViewController {
     }
 //------------------------------------------------------------------------------------------
 
-    // Color View Box
-    
-//    func randomColor() -> UIColor {
-//        red = CGFloat.random(in: 0...1)
-//        blue = CGFloat.random(in: 0...1)
-//        green = CGFloat.random(in: 0...1)
-//        let newColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
-//        return newColor
-//        //colorGuessBox.backgroundColor = myColor
-//
-//    }
 //------------------------------------------------------------------------------------------
 
     // color buttons choice (actionable button response)
@@ -94,7 +83,7 @@ class ViewController: UIViewController {
         switch sender.tag {
         case 0:
             if red >= green && red >= blue {
-//                colorGuessBox.backgroundColor = randomColor()
+
                 titlePrompt.text = "CORRECT 🤩"
                 currentScore += 1
                 scoreOutletLabel.text = "Current Score: \(currentScore)"
@@ -110,7 +99,7 @@ class ViewController: UIViewController {
 
         case 1:
             if blue >= green && blue >= red {
-//                 colorGuessBox.backgroundColor = randomColor()
+
                 currentScore += 1
                 titlePrompt.text = "CORRECT 🤩"
                 scoreOutletLabel.text = "Current Score: \(currentScore)"
@@ -125,7 +114,7 @@ class ViewController: UIViewController {
 
         case 2:
             if green >= blue && green >= red {
-//                colorGuessBox.backgroundColor = randomColor()
+
                 titlePrompt.text = "CORRECT 🤩"
                 currentScore += 1
                 scoreOutletLabel.text = "Current Score: \(currentScore)"
