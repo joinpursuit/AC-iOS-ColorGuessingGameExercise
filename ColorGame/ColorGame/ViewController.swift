@@ -93,12 +93,11 @@ class ViewController: UIViewController {
 
         switch sender.tag {
         case 0:
-            if red > green &&  red > blue {
-                
+            if red >= green && red >= blue {
+//                colorGuessBox.backgroundColor = randomColor()
                 titlePrompt.text = "CORRECT 🤩"
                 currentScore += 1
                 scoreOutletLabel.text = "Current Score: \(currentScore)"
-                 colorGuessBox.backgroundColor = randomColor()
                 highScoreUpdated()
 
             } else {
@@ -110,10 +109,10 @@ class ViewController: UIViewController {
             }
 
         case 1:
-            if blue > green &&  blue > red {
-                 colorGuessBox.backgroundColor = randomColor()
-                titlePrompt.text = "CORRECT 🤩"
+            if blue >= green && blue >= red {
+//                 colorGuessBox.backgroundColor = randomColor()
                 currentScore += 1
+                titlePrompt.text = "CORRECT 🤩"
                 scoreOutletLabel.text = "Current Score: \(currentScore)"
                  highScoreUpdated()
 
@@ -125,7 +124,8 @@ class ViewController: UIViewController {
             }
 
         case 2:
-            if green > blue &&  green > red { colorGuessBox.backgroundColor = randomColor()
+            if green >= blue && green >= red {
+//                colorGuessBox.backgroundColor = randomColor()
                 titlePrompt.text = "CORRECT 🤩"
                 currentScore += 1
                 scoreOutletLabel.text = "Current Score: \(currentScore)"
