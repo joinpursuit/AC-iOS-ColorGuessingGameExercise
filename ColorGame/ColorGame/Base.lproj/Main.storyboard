@@ -56,9 +56,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2s-C4-oFH">
-                                <rect key="frame" x="175" y="753" width="65" height="30"/>
+                                <rect key="frame" x="169" y="753" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="RESTART"/>
+                                <state key="normal" title="TRY AGAIN"/>
                                 <connections>
                                     <action selector="restartButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9aZ-Yw-zP6"/>
                                 </connections>
@@ -70,8 +70,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HIIGH SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIx-le-Pz7">
-                                <rect key="frame" x="155" y="448" width="105" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HIIGH SCORE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIx-le-Pz7">
+                                <rect key="frame" x="137" y="430" width="141" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -87,7 +87,7 @@
                         <outlet property="buttonRed" destination="PaB-dt-bdW" id="u32-t3-gVG"/>
                         <outlet property="buttonRestart" destination="s2s-C4-oFH" id="q91-Kj-8E4"/>
                         <outlet property="colorGuessBox" destination="IZY-Gp-6eh" id="9gc-JI-dZ5"/>
-                        <outlet property="highScoreOutletLabel" destination="fIx-le-Pz7" id="07O-gg-KcG"/>
+                        <outlet property="highScoreOutletLabel" destination="fIx-le-Pz7" id="2lz-2T-Mdc"/>
                         <outlet property="scoreOutletLabel" destination="nGM-M8-d09" id="ktC-do-uiU"/>
                         <outlet property="titlePrompt" destination="Fik-kD-shL" id="GTb-ym-MlL"/>
                     </connections>

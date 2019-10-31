@@ -99,6 +99,7 @@ class ViewController: UIViewController {
                 currentScore += 1
                 scoreOutletLabel.text = "Current Score: \(currentScore)"
                  colorGuessBox.backgroundColor = randomColor()
+                highScoreUpdated()
 
             } else {
                 titlePrompt.textColor = .red
@@ -114,6 +115,7 @@ class ViewController: UIViewController {
                 titlePrompt.text = "CORRECT 🤩"
                 currentScore += 1
                 scoreOutletLabel.text = "Current Score: \(currentScore)"
+                 highScoreUpdated()
 
             } else {
                 titlePrompt.textColor = .blue
@@ -127,6 +129,7 @@ class ViewController: UIViewController {
                 titlePrompt.text = "CORRECT 🤩"
                 currentScore += 1
                 scoreOutletLabel.text = "Current Score: \(currentScore)"
+                 highScoreUpdated()
 
             } else {
                 titlePrompt.textColor = .blue
@@ -140,6 +143,8 @@ class ViewController: UIViewController {
     }
  }
     
+
+//------------------------------------------------------------------------------------------
     
     @IBAction func restartButtonAction(_ sender: UIButton) {
         colorGuessBox.backgroundColor = randomColor()
@@ -149,7 +154,13 @@ class ViewController: UIViewController {
     }
     
 //------------------------------------------------------------------------------------------
-
+    
+    func highScoreUpdated() {
+       if currentScore > currentHighScore {
+            currentHighScore = currentScore
+        highScoreOutletLabel.text = ("HIGH SCORE: \(currentHighScore)")
+        }
+    }
     
 }
 
