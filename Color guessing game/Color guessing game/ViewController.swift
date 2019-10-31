@@ -10,36 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
-
     @IBOutlet weak var displayedColor: UIView!
     @IBOutlet weak var userFeedBack: UILabel!
     
     var score = 0
-    var scoresOfGame = [Int]()
-    //var highestScore = 0
-    //found solution on https://stackoverflow.com/questions/45423321/cannot-use-instance-member-within-property-initializer but don't understand why randomColor can be used across all functions
-    
-    lazy var bgColor = displayedColor.backgroundColor!
+    var scoresOfGame = Set<Int>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        bgColor = ColorModel.genRandomColor()
+        displayedColor.backgroundColor! = ColorModel.genRandomColor()
         //userFeedBack.isHidden = true
     }
     
     @IBAction func guessColor(_ guessColor: UIButton) {
         //userFeedBack.isHidden.toggle()
-        if guessColor.tag == ColorModel.getMaxColor(bgColor: bgColor) {
+        if guessColor.tag == ColorModel.getMaxColor(bgColor: displayedColor.backgroundColor!) {
             score+=1
-            scoresOfGame.append(score)
+            scoresOfGame.insert(score)
             userFeedBack.text = "Correct guess. Your score is \(score). Your highest score is \(scoresOfGame.max()!)"
-            bgColor = ColorModel.genRandomColor()
+            displayedColor.backgroundColor! = ColorModel.genRandomColor()
         } else  {
             score = 0
-            scoresOfGame.append(score)
+            scoresOfGame.insert(score)
             userFeedBack.text = "Incorrect guess. Your score is \(score). Your highest score is \(scoresOfGame.max()!)"
+            displayedColor.backgroundColor! = ColorModel.genRandomColor()
         }
     }
     
@@ -47,6 +42,7 @@ class ViewController: UIViewController {
         score = 0
         scoresOfGame.removeAll()
         userFeedBack.text = "Unknown guess. Your score is 0 and you highest score is 0."
+        displayedColor.backgroundColor! = ColorModel.genRandomColor()
     }
     
     
