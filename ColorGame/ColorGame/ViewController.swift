@@ -82,7 +82,7 @@ class ViewController: UIViewController {
 
         switch sender.tag {
         case 0:
-            if red >= green && red >= blue {
+            if red > green && red > blue {
 
                 titlePrompt.text = "CORRECT 🤩"
                 currentScore += 1
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
             }
 
         case 1:
-            if blue >= green && blue >= red {
+            if blue > green && blue > red {
 
                 currentScore += 1
                 titlePrompt.text = "CORRECT 🤩"
@@ -113,7 +113,7 @@ class ViewController: UIViewController {
             }
 
         case 2:
-            if green >= blue && green >= red {
+            if green > blue && green > red {
 
                 titlePrompt.text = "CORRECT 🤩"
                 currentScore += 1

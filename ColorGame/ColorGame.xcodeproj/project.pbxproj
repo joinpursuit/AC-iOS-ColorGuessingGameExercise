@@ -13,7 +13,6 @@
 		3010D3F62368F1090055069F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3010D3F42368F1090055069F /* Main.storyboard */; };
 		3010D3F82368F10A0055069F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3010D3F72368F10A0055069F /* Assets.xcassets */; };
 		3010D3FB2368F10A0055069F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3010D3F92368F10A0055069F /* LaunchScreen.storyboard */; };
-		3010D4032369CB440055069F /* ColorRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3010D4022369CB440055069F /* ColorRange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		3010D3F72368F10A0055069F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3010D3FA2368F10A0055069F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3010D3FC2368F10A0055069F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3010D4022369CB440055069F /* ColorRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +58,6 @@
 			children = (
 				3010D3EE2368F1090055069F /* AppDelegate.swift */,
 				3010D3F02368F1090055069F /* SceneDelegate.swift */,
-				3010D4022369CB440055069F /* ColorRange.swift */,
 				3010D3F42368F1090055069F /* Main.storyboard */,
 				3010D3F22368F1090055069F /* ViewController.swift */,
 				3010D3F72368F10A0055069F /* Assets.xcassets */,
@@ -144,7 +141,6 @@
 				3010D3F32368F1090055069F /* ViewController.swift in Sources */,
 				3010D3EF2368F1090055069F /* AppDelegate.swift in Sources */,
 				3010D3F12368F1090055069F /* SceneDelegate.swift in Sources */,
-				3010D4032369CB440055069F /* ColorRange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
